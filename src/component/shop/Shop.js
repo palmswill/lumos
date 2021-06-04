@@ -7,7 +7,7 @@ const Shop = () => {
   const info = useSelector((state) =>
     state.house.info.filter((data) => data.name === currentHouse)
   );
-  console.log(currentHouse);
+  console.log(currentHouse); //test/
   console.log(info);
   if (!currentHouse) return "";
   return (
