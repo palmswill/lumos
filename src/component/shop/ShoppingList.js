@@ -10,12 +10,13 @@ const ShoppingList = () => {
     <Container className="shopping-list">
       <Card.Group itemsPerRow={4}>
         {itemList
-          ? itemList.map((item) => {
+          ? itemList.map((item, index) => {
               let { image, name, gender, eyeColour, hairColour, wand } = item;
               let { wood, core, length } = wand;
               let wandDescrip = wand ? `${wood} ${core} ${length}` : "";
               return (
                 <Card
+                  key={index}
                   image={image}
                   header={name}
                   meta={gender}

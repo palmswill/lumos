@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import { useSelector, useDispatch } from "react-redux";
 import { setHouse, removeHouse } from "../../store/reducers/HouseReducer";
 
@@ -17,12 +17,7 @@ const HouseCard = () => {
   return (
     <section className="house-section">
       {currentHouse ? (
-        <Button
-          color={"blue"}
-          content="Re-Select Your House"
-          className="fadein delay-1s"
-          onClick={() => dispatch(removeHouse())}
-        />
+        <button onClick={() => dispatch(removeHouse())}>REMOVE</button>
       ) : (
         <Card.Group centered itemsPerRow={4}>
           {houseList

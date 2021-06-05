@@ -73,6 +73,10 @@ section.house-section > .cards {
   margin-top: 1rem;
 }
 .shop .list,
-.shop .side-list {
+.segment {
   background-color: transparent !important;
+}
+
+.card {
+  overflow: hidden;
 }
