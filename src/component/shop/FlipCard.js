@@ -10,8 +10,10 @@ const FlipCard = ({ FrontCard, BackCard, style, flipped }) => {
     position: "relative",
     width: "100%",
     height: "100%",
-    transition: "transform 0.8s",
-    transformStyle: "preserved-3d",
+    textAlign: "center",
+    transition: "transform 0.6s",
+    transformStyle: "preserve-3d",
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
   };
 
   const flippedStyle = {
@@ -25,11 +27,8 @@ const FlipCard = ({ FrontCard, BackCard, style, flipped }) => {
     width: "100%",
     height: "100%",
     backgroundColor: "transparent",
-    WebkitBackfaceVisibility: "hidden",
-    transformStyle: "preserved-3d",
-    backfaceVisibility: "hidden",
+    backfaceVisibility: "hidden"
 
-    opacity: "0.99",
   };
 
   const frontCardStyle = {
@@ -44,7 +43,11 @@ const FlipCard = ({ FrontCard, BackCard, style, flipped }) => {
   return (
     <div
       className="flip-card"
-      style={{ height: "20vh", backgroundColor: "transparent" }}
+      style={{
+        height: "20vh",
+        backgroundColor: "transparent",
+        perspective: "1000px",
+      }}
     >
       <div
         className="flip-card-inner"
@@ -61,7 +64,13 @@ const FlipCard = ({ FrontCard, BackCard, style, flipped }) => {
           }
         </div>
         <div className="back" style={backCardStyle}>
-          {<Card header={"back"} />}
+          {
+            <Card
+              header={"back"}
+              style={{ height: "100%" }}
+              onClick={() => setisFlipped(!isFlipped)}
+            />
+          }
         </div>
       </div>
     </div>

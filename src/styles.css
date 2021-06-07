@@ -86,3 +86,7 @@ section.house-section > .cards {
 .card {
   overflow: hidden;
 }
+.card:hover{
+  z-index:unset !important;
+
+}
