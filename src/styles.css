@@ -3,21 +3,25 @@
   --font-nav-item: "Raleway", sans-serif;
   --nav-item-size: clamp(13px, 1.5vw, 25px);
   font-size: clamp(10px, 2vw, 20px);
-}
-body {
-  width: 100vw;
-}
-.App {
-  text-align: center;
+
+
 }
 
-.home {
+html, body, #root, .App {
+  min-height:100vh;
+}
+
+
+.App {
+  text-align: center;
   background-image: url("https://images.unsplash.com/photo-1540649967130-f25a37623f41?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center center;
-  height: 120vh;
 }
+
+
 /* mainNavbar */
 .navbar {
   background-color: transparent !important;
@@ -33,6 +37,11 @@ body {
   transform: translateY(40%);
   font-size: 40px;
   font-family: var(--font-logo);
+}
+
+.logo:hover{
+  cursor: pointer;
+
 }
 
 .navbar .item {
@@ -72,10 +81,7 @@ section.house-section > .cards {
   text-align: left;
   margin-top: 1rem;
 }
-.shop .list,
-.segment {
-  background-color: transparent !important;
-}
+
 
 .card {
   overflow: hidden;

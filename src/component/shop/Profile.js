@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Grid, Image, Segment } from "semantic-ui-react";
+import { Grid, Image, Header, Segment } from "semantic-ui-react";
 
 const Profile = () => {
   const currentHouse = useSelector((state) => state.house.house);
@@ -12,7 +12,10 @@ const Profile = () => {
     <Segment>
       <Grid>
         <Grid.Row>
-          <Image src={image} />
+          <Grid.Column>
+            <Header color={"black"} textAlign={"center"}>School House</Header>
+            <Image src={image} />
+          </Grid.Column>
         </Grid.Row>
         <Grid.Row></Grid.Row>
       </Grid>

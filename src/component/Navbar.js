@@ -31,7 +31,9 @@ const Navbar = () => {
           content="Collections"
           className="fadein delay-15s"
         />
-        <div className="center aligned column logo fadein delay-1s">Lumos</div>
+        <div className="center aligned column logo fadein delay-1s"
+        onClick={()=>window.location.href="/"}
+        >Lumos</div>
 
         <Menu.Item
           name="aboutus"

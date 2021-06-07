@@ -1,5 +1,6 @@
 import "./styles.css";
 import "./fade.css";
+import "./flipCard.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import "semantic-ui-css/semantic.min.css";
